@@ -11,12 +11,15 @@
 
             if (!scope.searchCriteria.offices) {
                 scope.searchCriteria.offices = null;
+                console.log("scope.searchCriteria.offices:: ", scope.searchCriteria.offices)
                 scope.saveSC();
             }
             scope.filterText = scope.searchCriteria.offices || '';
+            console.log("scope.filterText: ", scope.filterText)
 
             scope.onFilter = function () {
                 scope.searchCriteria.offices = scope.filterText;
+                console.log("scope.searchCritera.officeslllll::: ", scope.searchCriteria.offices)
                 scope.saveSC();
             };
 

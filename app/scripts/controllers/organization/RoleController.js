@@ -7,14 +7,17 @@
             };
 
 
-            if (!scope.searchCriteria.roles) {
-                scope.searchCriteria.roles = null;
+            if (!scope.x) {
+                scope.x = null;
+                console.log(" scope.x::: ",  scope.x)
                 scope.saveSC();
             }
-            scope.filterText = scope.searchCriteria.roles || '';
+            scope.filterText = scope.x || '';
+            console.log("scope.filterText:: ", scope.filterText)
 
             scope.onFilter = function () {
-                scope.searchCriteria.roles = scope.filterText;
+                scope.x = scope.filterText;
+                console.log("scope.x:::::::: ", scope.x)
                 scope.saveSC();
             };
 
